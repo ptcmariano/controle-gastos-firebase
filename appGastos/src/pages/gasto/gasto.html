@@ -25,21 +25,17 @@
     </ion-item>
   </ion-list>
   <ion-list radio-group>
+    <ion-list-header>Forma de pagamento</ion-list-header>
+    <ion-item *ngFor="let pgto of formaspgto">
+      <ion-label>{{pgto.name}}</ion-label>
+      <ion-radio value="{{pgto.id}}"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <ion-list radio-group>
     <ion-list-header>Categoria</ion-list-header>
-
-    <ion-item>
-      <ion-label>combustivel</ion-label>
-      <ion-radio checked="true" value="combustivel"></ion-radio>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>lanche</ion-label>
-      <ion-radio value="lanche"></ion-radio>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>padaria</ion-label>
-      <ion-radio value="padaria"></ion-radio>
+    <ion-item *ngFor="let categoria of categorias">
+      <ion-label>{{categoria.name}}</ion-label>
+      <ion-radio value="{{categoria.name}}"></ion-radio>
     </ion-item>
   </ion-list>
   <button ion-button full>Gravar</button>
